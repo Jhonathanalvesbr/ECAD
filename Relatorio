@@ -1,0 +1,41 @@
+# -*- coding: cp1252 -*-
+import string
+
+relatorio = open('C:\Jhonathan\l.odt', 'w')
+a = int(raw_input("Quantas notas? "))
+b = int(1)
+nota, data, estabelecimento, municipio, beneficiado, motivo, valor = [], [], [], [], [], [], []
+tab = '\t'
+repete = False
+verifica = int()
+while (b <= a):
+    print(b,"° Nota")
+    print("___________________________________________________________________\n");
+    nota += list([raw_input("// Nota Fiscal: ")])
+    if (repete == True):
+        verifica = int(raw_input("// Data: "+data[b-2] +tab+"|| Mesma Data? (1-Sim, 2-Não) "))
+        if(verifica == 1):
+            data += data[b-2]
+        else:
+            data += list([raw_input("// Data: ")])
+    data += list([raw_input("// Data: ")])
+    estabelecimento += list([raw_input("// Estabelecimento: ")])
+    municipio += list([raw_input("// Município: ")])
+    beneficiado += list([raw_input("// Beneficiado: ")])
+    motivo += list([raw_input("// Motivo: ")])
+    valor += list([raw_input("// Valor: ")])
+    print("___________________________________________________________________\n");
+    b += 1
+    repete = True
+b = int(0)
+while (b < a):
+    relatorio.write("NOTA FISCAL Nº: "+nota[b]+tab+tab+tab+"DATA: "+data[b]+"\nESTABELECIMENTO: "+estabelecimento[b]+
+                    "\nMUNICÍPIO: "+municipio[b]+"\nBENEFICIADO: "+beneficiado[b]+
+                    "\nMOTIVO: "+motivo[b]+"\nVALOR: "+valor[b]+
+                    "________________________________________________________________________________________________")
+    b += 1
+relatorio.close()
+"Mesma Data? (1-Sim, 2-Não)"
+"Mesmo Estabelecimento? (1-Sim, 2-Não)"
+"Mesmo Município? (1-Sim, 2-Não)"
+"Mesmo Motivo? (1-Sim, 2-Não)"
