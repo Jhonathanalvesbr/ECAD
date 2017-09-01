@@ -18,12 +18,45 @@ while (b <= a):
             data += data[b-2]
         else:
             data += list([raw_input("// Data: ")])
-    data += list([raw_input("// Data: ")])
-    estabelecimento += list([raw_input("// Estabelecimento: ")])
-    municipio += list([raw_input("// Município: ")])
-    beneficiado += list([raw_input("// Beneficiado: ")])
-    motivo += list([raw_input("// Motivo: ")])
-    valor += list([raw_input("// Valor: ")])
+        verifica = int(0)
+        verifica = int(raw_input("// Estabelecimento: "+estabelecimento[b-2] +estabelecimento+"|| Mesmo Estabelecimento? (1-Sim, 2-Não) "))
+        if(verifica == 1):
+            estabelecimento += estabelecimento[b-2]
+        else:
+            data += list([raw_input("// Estabelecimento: ")])
+        verifica = int(0)
+        verifica = int(raw_input("// Município: "+municipio[b-2] +municipio+"|| Mesmo Município? (1-Sim, 2-Não) "))
+        if(verifica == 1):
+            municipio += municipio[b-2]
+        else:
+            municipio += list([raw_input("// Município: ")])
+        verifica = int(0)
+        verifica = int(raw_input("// Beneficiado: "+beneficiado[b-2] +beneficiado+"|| Mesmo Beneficiado? (1-Sim, 2-Não) "))
+        if(verifica == 1):
+            beneficiado += beneficiado[b-2]
+        else:
+            beneficiado += list([raw_input("// Beneficiado: ")])
+        verifica = int(0)
+        verifica = int(raw_input("// Motivo: "+motivo[b-2] +tab+"|| Mesmo Motivo? (1-Sim, 2-Não) "))
+        if(verifica == 1):
+            motivo += motivo[b-2]
+        else:
+            motivo += list([raw_input("// Motivo: ")])
+        verifica = int(0)
+        verifica = int(raw_input("// Valor: "+valor[b-2] +tab+"|| Mesmo Valor? (1-Sim, 2-Não) "))
+        if(verifica == 1):
+            valor += valor[b-2]
+        else:
+            valor += list([raw_input("// Valor: ")])
+        verifica = int(0)
+            
+    else:
+        data += list([raw_input("// Data: ")])
+        estabelecimento += list([raw_input("// Estabelecimento: ")])
+        municipio += list([raw_input("// Município: ")])
+        beneficiado += list([raw_input("// Beneficiado: ")])
+        motivo += list([raw_input("// Motivo: ")])
+        valor += list([raw_input("// Valor: ")])
     print("___________________________________________________________________\n");
     b += 1
     repete = True
